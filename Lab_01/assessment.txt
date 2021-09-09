@@ -1,0 +1,8 @@
+1. How would you change the executable name from main to cselab?
+- instead of "g++ main.cpp -o main" we would type "g++ main.cpp -o cselab", then to run, ./cselab in terminal.
+2. What happens when you compile using g++ <source> only?
+- we recieve a default executable named "a.out", then to run, ./a.out in terminal.
+3. How can you remove the line using namespace std; from your program and
+get it to compile.
+if "using namespace std;" is not in the file you can type "std::cout" or "std::endl" in order for it to compile. You must include the "std::" everytime you want to use the iostream library.
+
