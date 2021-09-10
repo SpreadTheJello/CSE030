@@ -2,5 +2,8 @@
     "files.associations": {
         "iostream": "cpp",
         "istream": "cpp"
-    }
+    },
+    "spellchecker.ignoreWordsList": [
+        "array1"
+    ]
 }
