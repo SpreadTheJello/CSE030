@@ -1,0 +1,21 @@
+array1:
+
+include iostream + std
+initialize variables: arr_size (int) and declare increasing to true (bool)
+func(){
+    ask user for size
+    arr_size <- userinput
+    
+    error handle for incorrect arr_size < 0
+    cont. if no error:
+
+    ask user for numbers in array
+    initialize arr[arr_size]
+
+    loop through array size{
+        check input by spaces and accept integers and input into array[i]
+        check if its increasing by checking if number is less than the last number inputted, only if we're on 2nd loop
+        print array
+    }
+    print if increasing
+}
