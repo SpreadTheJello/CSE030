@@ -32,3 +32,22 @@ func(){
     }
     new line
 }
+
+array3:
+
+include iostream + std
+initialize variables: arr_size and neg (ints)
+func(){
+    ask user for array size
+    error handle, negative or greater than 10
+    output errors and stop program
+
+    initialize 2D array given the size
+    loop through row and ask user for values in that row
+    loop through column and assign values to arr
+
+    loop through final 2D array, row first then column
+    if value is negative, neg++
+
+    output to user if values are negative or non-negative given the final neg variable.
+}
