@@ -19,3 +19,16 @@ func(){
     }
     print if increasing
 }
+
+array2:
+
+include iostream + std
+initialize variables: str
+func(){
+    ask user for string to reverse
+    str <- userinput
+    for loop through length of string{
+        output str from last index to first
+    }
+    new line
+}
