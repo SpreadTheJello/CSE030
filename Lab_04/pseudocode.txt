@@ -1,1 +1,18 @@
 combineString:
+
+include libraries + namespace
+declare str and num = 1
+
+combineStr func(str, num){
+    for i = 0 i < num i++{
+        print str;
+    }
+}
+
+main func{
+    while(num != 0){
+        ask for string
+        ask for num
+        call combineStr()
+    }
+}
