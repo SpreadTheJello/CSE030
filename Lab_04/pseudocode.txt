@@ -55,3 +55,29 @@ sortArr func(int arr[]{
         cout "descending order: "
     }
 }
+
+
+sortArray2:
+
+arrsize and order choice is global
+sortArr func(int arr[]{
+    if(order ascending){
+        for int i i < arrsize i++{
+            temp = arr[i]
+            j = i-1
+            while(j >= 0 and arr[j] > temp){
+                arr[j+1] = arr[j]
+                j = j-1
+            }
+            arr[j+1] = temp
+        }
+        cout "ascending order: "
+    }
+
+    if(order descending){
+        same thing EXCEPT
+        while(j >= 0 and arr[j] < temp){
+        }
+        cout "descending order: "
+    }
+}
