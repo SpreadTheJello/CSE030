@@ -16,3 +16,42 @@ main func{
         call combineStr()
     }
 }
+
+
+sortArray1:
+
+arrsize and order choice is global
+sortArr func(int arr[]{
+    temp = 0
+    swap index = 0
+
+    if(order ascending){
+        for int i = 0 i < arrsize i++{
+            swapindex = i
+            for int j = i j < arrsize j++{
+                if arr[j] < arr[swapindex]{
+                    swapindex = j
+                }
+            }
+            temp = arr[i]
+            arr[i] = arr[swapindex]
+            arr[swapindex] = temp
+        }
+        cout "ascending order: "
+    }
+
+    if(order descending){
+        for int i = 0 i < arrsize i++{
+            swapindex = i
+            for int j = i j < arrsize j++{
+                if arr[swapindex] < arr[j]{ 
+                    swapindex = j
+                }
+            }
+            temp = arr[i]
+            arr[i] = arr[swapindex]
+            arr[swapindex] = temp
+        }
+        cout "descending order: "
+    }
+}
