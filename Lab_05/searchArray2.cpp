@@ -49,10 +49,10 @@ int binarySearchR(string *A, int array_size, string key){
             if(A[middle] == key){ // if key is in middle of array
                 return middle;
             }
-            if(A[middle] > key){ // key must be to the right
+            if(A[middle] > key){ // key must be to the left
                 num = middle + 1;
             }
-            else{ // key must be to the left
+            else{ // key must be to the right
                 array_size = middle - 1;
             }
         }   

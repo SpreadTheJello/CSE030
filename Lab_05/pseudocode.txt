@@ -1,0 +1,63 @@
+binarySearchR:
+
+int binarySearchR(string *A, int array_size, string key)){
+    int num = 0
+    we need to check if ascending or descending to handle either:
+    if(A[0] < A[1]){
+        while(num <= array_size){
+            middle = num + (array_size - num) / 2 ; 
+            if(A at middle is key){
+                return index
+            }
+            if(A at middle is less than key)
+                num = middle + 1
+            else{
+                array_size = middle - 1
+            }
+        }
+    }
+    else{
+        while(num <= array_size){
+            middle = num + (array_size - num) / 2 ; 
+            if(A at middle is key){
+                return index
+            }
+            if(A at middle is greater than key)
+                num = middle + 1
+            else{
+                array_size = middle - 1
+            }
+        }
+    }
+}
+
+binarySearchL:
+
+int binarySearchL(string *A, int array_size, string key)){
+    if(array_size >= 1){
+        we need to check if ascending or descending to handle either:
+        if(A[0] < A[1]){
+            middle = 1 + array_size / 2 ; 
+            if(A at middle is key){
+                return index
+            }
+            if(A at middle is greater than key)
+                call func again with (middle-1) as array_size
+            else{
+                call func again with (middle+1) as array_size
+            }
+        }
+        else{
+            middle = 1 + array_size / 2 ; 
+            if(A at middle is key){
+                return index
+            }
+            if(A at middle is less than key)
+                call func again with (middle-1) as array_size
+            else{
+                call func again with (middle+1) as array_size
+            }
+        }
+    }
+}
+
