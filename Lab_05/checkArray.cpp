@@ -4,40 +4,27 @@
 using namespace std;
 
 int checkArraySort(string *A, int array_size){
-    bool ascending, descending;
     int count = 0;
     for(int i = 0; i < array_size; i++){ // see if array is ascending.
-        for(int j = i + 1; j < array_size; j++){
-            if(A[i] < A[j]){
-                count++;
-            }
+        if(A[i] < A[i+1]){
+            count++;
         }
     }
-    if(count == array_size){
-        ascending = true;
+    if(count+1 == array_size){
+        return 1;
     }
 
     count = 0; // reset count
     for(int i = 0; i < array_size; i++){ // see if array is descending.
-        for(int j = i + 1; j < array_size; j++){
-            if(A[i] > A[j]){
-                count++;
-            }
+        if(A[i] > A[i+1]){
+            count++;
         }
     }
     if(count == array_size){
-        descending = true;
-    }
-
-    if(ascending){ // returns as needed
-        return 1;
-    }
-    else if(descending){
         return -1;
     }
-    else{
-        return 0;
-    }
+
+    return 0;
 }
 
 int main(){
