@@ -1,0 +1,7 @@
+apple
+orange
+banana
+kiwi
+orange
+apple
+dragonfruit
