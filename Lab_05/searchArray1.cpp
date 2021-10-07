@@ -29,15 +29,29 @@ int checkArraySort(string *A, int array_size){
 
 int binarySearchR(string *A, int array_size, string key){
     if(array_size >= 1){
-        int middle = 1 + array_size / 2;
-        if(A[middle] == key){ // if key is in middle of array
-            return middle;
+        if(A[0] < A[1]){
+            int middle = 1 + array_size / 2;
+            if(A[middle] == key){ // if key is in middle of array
+                return middle;
+            }
+            else if(A[middle] > key){ // key mst be to the left
+                return binarySearchR(A, (middle-1), key);
+            }
+            else{ // key must be to the right
+                return binarySearchR(A, (middle+1), key);
+            }
         }
-        else if(A[middle] > key){ // key mst be to the left
-            return binarySearchR(A, (middle-1), key);
-        }
-        else{ // key must be to the right
-            return binarySearchR(A, (middle+1), key);
+        else{
+            int middle = 1 + array_size / 2;
+            if(A[middle] == key){ // if key is in middle of array
+                return middle;
+            }
+            else if(A[middle] < key){ // key mst be to the left
+                return binarySearchR(A, (middle-1), key);
+            }
+            else{ // key must be to the right
+                return binarySearchR(A, (middle+1), key);
+            }
         }
     }
     return 0;
@@ -70,7 +84,7 @@ int main(){
     inFile.close();
 
     int result = checkArraySort(words, count);
-    if(result == -1 || result == 1){
+    if(result == -1){
         cout << "Enter the input search key: ";
         cin >> key;
         int index = binarySearchR(words, count, key);
@@ -80,7 +94,17 @@ int main(){
         else{
             cout << "They key " << key << "was not found in the array!" << endl;
         }
-        
+    }
+    else if(result == 1){
+        cout << "Enter the input search key: ";
+        cin >> key;
+        int index = binarySearchR(words, count, key);
+        if(index != -1){
+            cout << "Found key " << key << " at index " << index << "!" << endl;
+        }
+        else{
+            cout << "They key " << key << "was not found in the array!" << endl;
+        }
     }
     else{
         cout << "The array is not sorted!" << endl;
