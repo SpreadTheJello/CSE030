@@ -17,7 +17,7 @@ bool getTimeFromUser(struct Time &t){
     t.minutes = atoi(str.substr(3,5).c_str());
     t.seconds = atoi(str.substr(6,8).c_str());
 
-    for(int i = 0; i<8; i++)
+    for(int i = 0; i < 8; i++)
 		if(((str.c_str()[i] >= '0' && str.c_str()[i] <= '9') || str.c_str()[i] == ':')) // counts for 8 characters
 		{
 			count++;
