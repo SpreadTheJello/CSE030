@@ -2,6 +2,7 @@
     "files.associations": {
         "algorithm": "cpp",
         "string": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "iomanip": "cpp"
     }
 }

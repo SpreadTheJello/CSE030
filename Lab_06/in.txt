@@ -1,0 +1,22 @@
+3
+cse20
+2
+0
+75
+Mondays
+16:30:00
+17:20:00
+cse30
+4
+1
+78
+Mondays and Wednesdays
+16:30:00
+17:45:00
+math5
+3
+0
+98
+Tuesdays
+09:00:00
+09:50:00
