@@ -1,0 +1,19 @@
+getTimeFromUser:
+
+func(struct Time &t){
+    initialize str, count
+    getline store in str
+
+    set hours minutes, seconds = atoit(str.substr(x1, x2).c_str());
+    0,2 for hours, 3,5 for minutes, 6,8 for seconds.
+
+    for(int i = 0 i< 8 i ++){
+        if >= "0" and <= "9" or ":"{
+            count++
+        }
+    }
+    if(incorrect time, so, hours 0-23, minutes 0-59, seconds 0-59){
+        return false
+    }
+    return true
+}
