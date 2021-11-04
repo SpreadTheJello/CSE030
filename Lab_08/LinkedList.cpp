@@ -92,3 +92,38 @@ void LinkedList::clear(){
         removeFromBack();
     }
 }
+
+
+// Exercise 2
+void LinkedList::insertAtFront(int value){
+    Node* v = new Node;
+    v->val = value;
+    if(first == NULL){
+        v->next = NULL;
+        first = v;
+        last = v;
+    }
+    else{
+        v->next = first;
+        first = v;
+    }
+}
+
+bool LinkedList::removeFromFront(){
+    if(first == NULL){
+        return false;
+    }
+    if(first == last){
+        delete first;
+        first = NULL;
+        last = NULL;
+        return true;
+    }
+    else{
+        Node* old = first;
+        old = old->next;
+        delete first;
+        first = old;
+        return true;
+    }
+}
