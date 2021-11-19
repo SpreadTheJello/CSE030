@@ -1,4 +1,4 @@
-#include "Stack.h"
+#include "Stack_char.h"
 
 Stack::Stack(){
 
@@ -8,16 +8,16 @@ Stack::~Stack(){
 
 }
 
-void Stack::push(int value){
+void Stack::push(char value){
     insertAtBack(value);
 }
 
-int Stack::pop(){
-    int item = first->val;
+char Stack::pop(){
+    char item = first->val;
     removeFromBack();
     return item;
 }
 
-int& Stack::top(){
+char& Stack::top(){
     return last->val;
 }
